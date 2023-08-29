@@ -11,10 +11,26 @@
     
 }
 
+:focus-visible {
+    outline: none;
+}
+
 .container{
     max-width: 1280px;
     margin: 0 auto;
 }
+
+.abs{
+    position: absolute;
+}
+.rel{
+    position: relative;
+}
+
+.d-flex{
+    display: flex;
+}
+
 .text-center{
     text-align: center;
 }
@@ -33,15 +49,18 @@
 #form{
     padding: 3rem 0;
 }
+
+.border-bottom{
+    border-bottom: 1px solid #222;
+    padding-bottom: 1rem;
+}
 .formlist{
-    border-top: 1px solid #222;
     padding: 3rem 0;
 }
 .formlist li{
     display: flex;
     font-size: 1.2em;
-    font-size: 1.2em;
-    padding: 0.5em;
+    padding: 0.5em 0;
 }
 .formlist li strong{
     width: 20%;
@@ -69,6 +88,9 @@
     text-align: center;
     margin-right: 8px;
     padding: 0 1rem;
+    line-height: 1.7;
+
+
 }
 .formlist .label input[type=checkbox]:checked + label{
     background-color: #ff6600;
@@ -114,4 +136,113 @@
 .agreebox{
     font-size: 1em;
     margin: 1rem 0;
+}
+
+.nm + span{
+    display: none;
+}
+
+.nm:focus + span{
+    display: inline-block;
+    color: red;
+}
+.mx-4{
+    margin: 0 0.25rem;
+}
+
+.mx-8{
+    margin: 0 1rem;
+}
+
+input.normal{
+    font-size: 1rem;
+    line-height: 2.5;
+    border: 1px solid #666;
+    border-radius: 8px;
+    text-indent: 1rem;
+}
+
+.hp input{
+   
+}
+
+select[name="area"]{
+    width: 16rem;
+    font-size: 1rem;
+    line-height: 2.5;
+    height: 2.5rem;
+}
+select[name^="area"]{
+    
+}
+
+.select{
+    margin-bottom: 80px;
+}
+
+.familyBox{
+    width: 16rem;
+    cursor: pointer;
+}
+
+.familyBox h3{
+    border: 1px solid #666;
+    font-size: 1rem;
+    line-height: 2.5;
+    text-align: center;
+    /* position: relative;
+    background-color: white;
+    z-index: 10; */
+}
+
+.familyBox ul{
+    bottom: calc(100% - 1px);
+    left: 0; right: 0;
+    border: 1px solid #666;
+    border-bottom:0;
+    font-size: 1rem;
+    line-height: 2.5;
+    background-color: white;
+    text-indent: 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.familyBox:hover ul{
+    max-height: 450px;
+    bottom: 100%;
+}
+
+.familyBox h3:after{
+    content: "\F286";
+    font-family: bootstrap-icons;
+}
+
+.familyBox:hover h3:after{
+    content: "\F282";
+}
+
+.formlist.rwd{
+    width: 16rem;
+}
+
+.formlist.rwd .nm{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formlist.rwd li{
+    display: block;
+}
+
+.hp p{
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.hp p input{
+    width: calc(33.333% - 1rem);
 }
